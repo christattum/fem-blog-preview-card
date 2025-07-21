@@ -49,6 +49,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- Figma Dev Mode
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
@@ -59,6 +60,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+
+Subscribed to paid Figma subscription to use Dev Mode. This makes pulling CSS and custom properties much quicker. I wanted to get familar with the professional workflow as soon as possible. I am not a total beginner at CSS so I thought this was a good approach.
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
