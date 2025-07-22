@@ -4,6 +4,7 @@
     --color-gray-500: hsl(0, 0%, 42%);
     --color-gray-950: hsl(0, 0%, 7%);
 
+    --spacing-150: 1.2rem;
     --spacing-200: 2.4rem;
 
     --border-radius: 20px;
@@ -21,6 +22,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color-yellow);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6rem;
 }
 
 .card {
@@ -32,6 +38,28 @@ body {
     background: var(--color-white);
     padding: var(--spacing-200);
     box-shadow: 8px 8px 0px 0px #000;
+    max-width: 33.6rem;
+    font-size: 1.4rem;
+}
+
+.card .blog-image img {
+    border-radius: 10px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+}
+
+.card .title {
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+.card .description {
+    font-size: 1.4rem;
+    margin: 0;
 }
 
 
