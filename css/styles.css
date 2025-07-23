@@ -62,4 +62,16 @@ body {
     margin: 0;
 }
 
+.card .author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150, 12px);
+    font-size: 1.4rem;
+}
+
+.card .avatar img {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
 
