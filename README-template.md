@@ -59,31 +59,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
+### TODO
+
+- Mobile layout 
+- Hover styles
+- Fix Learning category badge - why isn't inline-block working? Looking at computed styles it's still block!
+- Adding align-self: flex-start does fix it. But why? Also even if parent isn't flex!!
+- It's because the parent .content if flex and direction os column. This makes each flex item fill the width. So align-self: flex-start overrides that. Research this.
+
 ### What I learned
 
 Subscribed to paid Figma subscription to use Dev Mode. This makes pulling CSS and custom properties much quicker. I wanted to get familar with the professional workflow as soon as possible. I am not a total beginner at CSS so I thought this was a good approach.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Also brushed up on Flexbox which I used for the main card content using flex-direction: column. Learneed that by default items stretch to fill full width. After trying unsuccessfuly to get inline-block to work, which it doesn't, the correct fix was to assign the align-self: flex-start property to the category.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+.card .category {
+  align-self: flex-start;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
