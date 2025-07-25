@@ -83,6 +83,40 @@ Also brushed up on Flexbox which I used for the main card content using flex-dir
 }
 ```
 
+### Responsive Fonts
+
+To avoid using media queries, I used a technique I learned a while ago, to use the clamp() function to dynamically scale fonts based on the view width.
+
+First I added three CSS variables for the three font sizes:-
+
+```css
+  --font-size-heading: 2.4rem;
+   --font-size-body: 1.4rem;
+  --font-size-desc: 1.6rem;
+```
+
+These are the desktop sizes. The mobile sizes are:-
+
+```css
+  --font-size-heading: 2rem;
+  --font-size-body: 1.2rem;
+  --font-size-desc: 1.4rem;
+```
+Note: I'm using the 62.5% root font size trick, so I can use rems instead of pixels, where 1 rem = 10px so the maths is easy :)
+
+Using the utility here:-
+https://clamp-calculator.netlify.app/
+
+I plugged the two variables in with the two view widths for desktop and mobile which are 1440px and 375px respectively (from the style guide).
+
+```css
+--font-size-heading: font-size: clamp(2rem, 1.859rem + 0.601vw, 2.4rem);
+--font-size-body: clamp(1.2rem, 1.13rem + 0.3vw, 1.4rem);
+--font-size-desc: clamp(1.4rem, 1.33rem + 0.3vw, 1.6rem);
+```
+
+
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.

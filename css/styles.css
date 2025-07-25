@@ -14,9 +14,9 @@
     --font-bold: 800;
     --font-normal: 500;
 
-    --font-size-heading: 2.4rem;
-    --font-size-body: 1.4rem;
-    --font-size-desc: 1.6rem;
+   --font-size-heading: clamp(2rem, 1.859rem + 0.601vw, 2.4rem);
+--font-size-body: clamp(1.2rem, 1.13rem + 0.3vw, 1.4rem);
+--font-size-desc: clamp(1.4rem, 1.33rem + 0.3vw, 1.6rem);
 }
 
 html {
