@@ -13,6 +13,10 @@
 
     --font-bold: 800;
     --font-normal: 500;
+
+    --font-size-heading: 2.4rem;
+    --font-size-body: 1.4rem;
+    --font-size-desc: 1.6rem;
 }
 
 html {
@@ -29,9 +33,9 @@ body {
     background-color: var(--color-yellow);
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
-    font-weight: var(----font-normal);
+    font-weight: var(--font-normal);
     font-style: normal;
-    font-size: 1.4rem;
+    font-size: var(--font-size-body);
 }
 
 .card {
@@ -71,14 +75,14 @@ body {
 }
 
 .card .title {
-    font-size: 2.4rem;
+    font-size: var(--font-size-heading);
     margin: 0;
     font-weight: var(--font-bold);
 }
 
 .card .description {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: var(--font-size-desc);
 }
 
 .card .author {
