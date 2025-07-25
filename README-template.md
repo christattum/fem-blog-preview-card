@@ -61,7 +61,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### TODO
 
-- Mobile layout 
 - Hover styles
 
 ### What I learned
