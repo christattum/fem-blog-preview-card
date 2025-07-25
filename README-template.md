@@ -63,9 +63,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Mobile layout 
 - Hover styles
-- Fix Learning category badge - why isn't inline-block working? Looking at computed styles it's still block!
-- Adding align-self: flex-start does fix it. But why? Also even if parent isn't flex!!
-- It's because the parent .content if flex and direction os column. This makes each flex item fill the width. So align-self: flex-start overrides that. Research this.
 
 ### What I learned
 
