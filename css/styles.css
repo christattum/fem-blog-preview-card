@@ -62,6 +62,7 @@ body {
     padding: var(--spacing-100) var(--spacing-150);
     align-self: flex-start;
     border-radius: 4px;
+    line-height: 1;
 }
 
 .card .author .name {
