@@ -95,7 +95,7 @@ body {
 .card .author {
     display: flex;
     align-items: center;
-    gap: var(--spacing-150, 12px);
+    gap: var(--spacing-150);
 }
 
 .card .avatar img {
