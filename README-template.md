@@ -14,7 +14,6 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -28,15 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshot.png)
 
 ### Links
 
@@ -45,30 +36,22 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+I subscribed to a paid Figma subscription to use Dev Mode. This makes pulling CSS and custom properties easier. I wanted to get familar with a professional workflow as soon as possible. I am not a total beginner at CSS so I thought this was a good approach to save some time.
+
+I also used CSS variables from the start for the colour palette, spacing and font sizes.
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Figma Dev Mode
+- CSS clamp()
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### TODO
-
-- Hover styles
+- Figma Dev Mode
+- [CSS Clamp Calculator](https://clamp-calculator.netlify.app)
 
 ### What I learned
 
-Subscribed to paid Figma subscription to use Dev Mode. This makes pulling CSS and custom properties much quicker. I wanted to get familar with the professional workflow as soon as possible. I am not a total beginner at CSS so I thought this was a good approach.
-
-Also brushed up on Flexbox which I used for the main card content using flex-direction: column. Learneed that by default items stretch to fill full width. After trying unsuccessfuly to get inline-block to work, which it doesn't, the correct fix was to assign the align-self: flex-start property to the category.
-
+I had to brush up on Flexbox which I used for the main card content. Learned that by default items stretch to full width. After trying unsuccessfuly to get inline-block to work, the correct fix was to assign the `align-self: flex-start` property to the category.
 
 ```css
 .card .content {
@@ -84,30 +67,33 @@ Also brushed up on Flexbox which I used for the main card content using flex-dir
 
 ### Responsive Fonts
 
-To avoid using media queries, I used a technique I learned a while ago, to use the clamp() function to dynamically scale fonts based on the view width.
+To avoid using media queries, I used a technique I learned a while ago, to use the clamp() function to dynamically scale fonts based on the view width, from the mobile size up to the desktop size.
 
-First I added three CSS variables for the three font sizes:-
-
-```css
-  --font-size-heading: 2.4rem;
-   --font-size-body: 1.4rem;
-  --font-size-desc: 1.6rem;
-```
-
-These are the desktop sizes. The mobile sizes are:-
+First I added three CSS variables for the three font sizes on desktop:-
 
 ```css
-  --font-size-heading: 2rem;
-  --font-size-body: 1.2rem;
-  --font-size-desc: 1.4rem;
+ --font-size-heading: 2.4rem;
+ --font-size-body: 1.4rem;
+ --font-size-desc: 1.6rem;
 ```
 
-Using the utility here:-
-https://clamp-calculator.netlify.app/
+The equivalent mobile sizes are:-
+
+```css
+ --font-size-heading: 2rem;
+ --font-size-body: 1.2rem;
+ --font-size-desc: 1.4rem;
+```
+
+To implement the variable font sizes, I used the following utility to create the clamp() function for each CSS variable.
+
+[CSS Clamp Calculator](https://clamp-calculator.netlify.app)
 
 Note: I'm using the 62.5% root font size trick, so I can use rems instead of pixels, where 1 rem = 10px so the maths is easy :) In the utility, set 1rem = 10px to reflect this.
 
-I plugged the two variables in with the two view widths for desktop and mobile which are 1440px and 375px respectively (from the style guide).
+First I set the two view widths for desktop and mobile which are 1440px and 375px respectively (from the style guide).
+
+For each variable, setting the min/max font sizes from the mobile/desktop sizes, produces the following:-
 
 ```css
 --font-size-heading: clamp(2rem, 1.859rem + 0.376vw, 2.4rem);
@@ -115,29 +101,18 @@ I plugged the two variables in with the two view widths for desktop and mobile w
 --font-size-desc: clamp(1.4rem, 1.33rem + 0.188vw, 1.6rem);
 ```
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Clamp Calculator](https://clamp-calculator.netlify.app) - This calculated the CSS clamp functions as outlined above.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+## Continued development
+
+I will continue reading up on Flexbox.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Chris Tattum](https://christattum.com)
+- Frontend Mentor - [@christattum](https://www.frontendmentor.io/profile/christattum)
+- X - [@christattum](https://www.x.com/christattum)
+- Bluesky - [@christattum](https://bsky.app/profile/christattum.bsky.social)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
