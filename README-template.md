@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/christattum/fem-blog-preview-card](https://github.com/christattum/fem-blog-preview-card)
+- Live Site URL: [https://christattum.github.io/fem-blog-preview-card](https://christattum.github.io/fem-blog-preview-card)
 
 ## My process
 
