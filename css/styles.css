@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--color-yellow);
+    color: var(--color-gray-950);
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: var(--font-normal);
@@ -88,6 +89,7 @@ body {
 .card .description {
     margin: 0;
     font-size: var(--font-size-desc);
+    color: var(--color-gray-500);
 }
 
 .card .author {
