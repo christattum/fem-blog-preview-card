@@ -80,6 +80,11 @@ body {
     font-weight: var(--font-bold);
 }
 
+.card .title:hover {
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
 .card .description {
     margin: 0;
     font-size: var(--font-size-desc);
